@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-dark: #0d1117;
+    --card-bg: #161b22;
+    --border-color: #30363d;
+    --neon-green: #238636;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--neon-green);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(35, 134, 54, 0.3);
+}
+
+header p {
+    color: var(--text-muted);
+}
+
+/* Search Box Layout */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#ip-input {
+    flex: 1;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+}
+
+#ip-input:focus {
+    border-color: var(--neon-green);
+}
+
+#lookup-btn {
+    background-color: var(--neon-green);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+#lookup-btn:hover {
+    background-color: #2ea043;
+}
+
+/* Dashboard Grid Component */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: var(--neon-green);
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.loading {
+    color: #e3b341;
+    font-style: italic;
+}

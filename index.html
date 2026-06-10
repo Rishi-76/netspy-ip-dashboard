@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetSpy // IP Geolocation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>NetSpy // Network Inspector</h1>
+            <p>Real-time public IP lookup and cyber metadata analysis.</p>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="ip-input" placeholder="Enter any IP address or domain (e.g., 8.8.8.8)...">
+            <button id="lookup-btn">Scan IP</button>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>IP Address</h3>
+                <p id="data-ip" class="loading">Fetching...</p>
+            </div>
+            <div class="card">
+                <h3>Location Details</h3>
+                <p id="data-location" class="loading">Fetching...</p>
+            </div>
+            <div class="card">
+                <h3>Internet Service Provider (ISP)</h3>
+                <p id="data-isp" class="loading">Fetching...</p>
+            </div>
+            <div class="card">
+                <h3>Timezone & Currency</h3>
+                <p id="data-meta" class="loading">Fetching...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
